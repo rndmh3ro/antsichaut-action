@@ -11,4 +11,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - "--since_version ${{ inputs.since_version }}"
+    - "--since_version"
+    - "${{ inputs.since_version }}"
