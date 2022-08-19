@@ -1,0 +1,14 @@
+name: 'antsichaut'
+description: 'run antsichaut as a github pipeline action'
+inputs:
+  since_version:
+    description: 'the version to fetch PRs since'
+    required: true
+  to_version:
+    description: 'the version to fetch PRs to'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - --since_version ${{ inputs.since_version }}
