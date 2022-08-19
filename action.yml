@@ -1,6 +1,9 @@
 name: 'antsichaut'
 description: 'run antsichaut as a github pipeline action'
 inputs:
+  github_token:
+    description: 'token to access github'
+    required: true
   since_version:
     description: 'the version to fetch PRs since'
     required: true
@@ -11,5 +14,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - "--since_version"
+    - "${{ inputs.github_token }}"
     - "${{ inputs.since_version }}"
+    - "${{ inputs.to_version }}"

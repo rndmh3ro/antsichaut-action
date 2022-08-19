@@ -4,5 +4,7 @@ WORKDIR /usr/src/app
 
 RUN pip install antsichaut
 
-ENTRYPOINT [ "antsichaut" ]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]
 

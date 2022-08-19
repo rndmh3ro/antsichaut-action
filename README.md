@@ -25,4 +25,5 @@ the version to fetch PRs to
 - name: 'Run antsichaut'
   uses: rndmh3ro/antsichaut-action@v1
   with:
+    GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
     since_version: "${{ steps.previoustag.outputs.tag }}"
