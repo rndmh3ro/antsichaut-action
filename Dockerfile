@@ -4,5 +4,5 @@ WORKDIR /usr/src/app
 
 RUN pip install antsichaut
 
-CMD [ "antsichaut" ]
+ENTRYPOINT [ "antsichaut" ]
 
