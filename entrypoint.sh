@@ -10,6 +10,11 @@ if [ ! -z "$SINCE_VERSION" ]; then
   ARG_SINCE_VERSION="--since_version $SINCE_VERSION"
 fi
 
+echo arg_to $ARG_TO_VERSION
+echo to $TO_VERSION
+echo arg_since $ARG_SINCE_VERSION
+echo since $SINCE_VERSION
+
 
 echo "antsichaut --github_token $GIT_TOKEN $ARG_SINCE_VERSION $ARG_TO_VERSION"
 antsichaut --github_token $GIT_TOKEN $ARG_SINCE_VERSION $ARG_TO_VERSION
