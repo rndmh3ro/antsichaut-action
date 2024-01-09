@@ -1,4 +1,4 @@
-name: 'antsichaut'
+name: 'antsichaut-old'
 description: 'run antsichaut as a github pipeline action'
 inputs:
   github_token:
